@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 50px 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.avatar-section {
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #667eea;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05) rotateZ(2deg);
+}
+
+.name {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.position {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.facebook {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.facebook:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.zalo {
+  background: linear-gradient(135deg, #0068ff 0%, #0084ff 100%);
+}
+
+.zalo:hover {
+  background: linear-gradient(135deg, #0084ff 0%, #0068ff 100%);
+}
+
+.linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #00a8e8 100%);
+}
+
+.linkedin:hover {
+  background: linear-gradient(135deg, #00a8e8 0%, #0077b5 100%);
+}
+
+.gift-btn {
+  width: 100%;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e72 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+  letter-spacing: 1px;
+}
+
+.gift-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(135deg, #ff8e72 0%, #ff6b6b 100%);
+}
+
+.gift-btn:active {
+  transform: translateY(-1px);
+}
+
+#fireworks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+@media (max-width: 600px) {
+  .profile-card {
+    padding: 40px 25px;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .position {
+    font-size: 1rem;
+  }
+
+  .social-btn {
+    width: 100px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    gap: 10px;
+  }
+}
+
+/* CSS cho form lời nhắn */
+.message-form {
+  margin-top: 40px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.message-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.message-form input,
+.message-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.message-form textarea {
+  min-height: 100px;
+}
+
+.message-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.message-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}

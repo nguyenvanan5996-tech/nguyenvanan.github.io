@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Profile - Nguyễn Văn An</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="profile-card">
+      <div class="avatar-section">
+        <img src="avatar.jpg" alt="Nguyễn Văn An" class="avatar">
+      </div>
+      
+      <h1 class="name">Nguyễn Văn An</h1>
+      <p class="position">Marketing tại JOYWORK</p>
+      
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" class="social-btn facebook">
+          <span>Facebook</span>
+        </a>
+        <a href="https://zalo.me" target="_blank" class="social-btn zalo">
+          <span>Zalo</span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="social-btn linkedin">
+          <span>LinkedIn</span>
+        </a>
+      </div>
+      
+      <button class="gift-btn" id="giftBtn">🎁 Tặng quà</button>
+    </div>
+    
+    <div class="message-form">
+      <h2>Để lại lời nhắn</h2>
+      <input type="text" id="name" placeholder="Nhập tên của bạn">
+      <textarea id="message" placeholder="Nhập lời nhắn của bạn"></textarea>
+      <button id="sendBtn">Gửi</button>
+    </div>
+  </div>
+  
+  <canvas id="fireworks"></canvas>
+  
+  <script src="script.js"></script>
+</body>
+</html>
